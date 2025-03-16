@@ -21,10 +21,14 @@ body, html{
     height: 100vh;
 }
 
+h3{
+    color: #0059b8;
+}
+
 .form-log{
     max-width: 320px;
     padding: 15px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -37,9 +41,9 @@ button{
     border-radius: 4px;
     cursor :pointer;
     border: none;
-    width: 80%;
+    width: 50%;
     max-width: 250px;
-    padding: 8px 0;
+    padding: 6.8px 0;
     font-size: 14px;
 }
 
@@ -49,8 +53,13 @@ button:hover{
 
 p{
     margin: 10px 0 0 0;
+    font-size: 14px;
+    color: #0059b8;
 }
 
+button a{
+    color: rgb(255, 255, 255);
+}
 p a{
     color: #007bff;
     font-size: 14px;
@@ -59,10 +68,18 @@ p a{
 input{
     padding: 8px;
     font-size: 14px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
+    margin: 10px 4px;
+    border: 1px solid #f1f1f1;
     border-radius: 4px;
-    width: 18.5rem;
+    width: 100%;
+}
+
+input::placeholder{
+    color: #0069d9;
+}
+
+input:focus::placeholder{
+    color: #a6cef8;
 }
 
 input:focus{
@@ -74,5 +91,36 @@ input, button{
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+#sup{
+    display: inline-block;
+    position: relative;
+}
 
+#sup::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom:-2px;
+    width: 0%;
+    height: 2px;
+    background-color: #0059b8;
+    transform-origin: left;
+    transition: width .2s ease-in-out;
+}
+
+#sup:hover::after{
+    width: 100%;
+}
+
+@media (max-width: 480px){ /*Phone responsive format*/
+    .container{
+        width: 90%;
+        padding: 10px\;
+    }
+
+    input, button{
+        width: 100%;
+        font-size: 14px;
+    }
+}
 
